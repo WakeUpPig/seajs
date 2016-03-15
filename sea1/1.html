@@ -14,14 +14,23 @@
     //http://localhost:63342/sea1/node_modules/seajs/dist/a.js
     //默认的目录是通过seajs所在的文件夹来找的
     //*相对路径引入
-    seajs.use('./a.js', function (a) {
-      a.Dialog()
+    //通过数组的方式引入多个文件
+    seajs.use(['./a.js','./b.js'], function (a) {
+       //动态的加载某个文件seajs.require();
+ //      var b= seajs.require('./b.js');
+//        a.Dialog();
+//        b.Dialog();
+
+    //    a.namespace.fn1();
+        a.fn1();
     });
     //不能完全避免命名冲突，而且调用时候名字过长
 //    obj.Dialog();
 //    c.js
 //    a.js
 //    b.js
+
+
 </script>
 </body>
 </html>

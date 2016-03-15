@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<!--<script src="a.js"></script>-->
+<!--<script src="b.js"></script>-->
+
+<script src="node_modules/seajs/dist/sea.js"></script>
+<body>
+<script>
+    //使用模块
+    //http://localhost:63342/sea1/node_modules/seajs/dist/a.js
+    //默认的目录是通过seajs所在的文件夹来找的
+    //*相对路径引入
+    seajs.use('./a.js', function (a) {
+      a.Dialog()
+    });
+    //不能完全避免命名冲突，而且调用时候名字过长
+//    obj.Dialog();
+//    c.js
+//    a.js
+//    b.js
+</script>
+</body>
+</html>

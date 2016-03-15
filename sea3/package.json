@@ -10,6 +10,7 @@
   "license": "ISC",
   "devDependencies": {
     "grunt-contrib-concat": "^1.0.0",
-    "grunt-contrib-uglify": "^1.0.0"
+    "grunt-contrib-uglify": "^1.0.0",
+    "grunt-cmd-transport":"^0.3.0"
   }
 }

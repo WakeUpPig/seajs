@@ -6,14 +6,36 @@ module.exports = function (grunt) {
                 files:{
                     //输出文件的地址
                     //后者是要合并的文件名字
-                    './dist/js/main.js':['./js/drag.js','./js/limit.js','./js/main.js','./js/util.js']
+                    './dist/js/main.js':['.build/js/drag.js','.build/js/limit.js','.build/js/main.js','.build/js/util.js']
 
+                }
+            }
+        },
+        //任务名字
+        transport:{
+            sea3:{
+                options:{
+                    //配置增加id头
+                    idleading:'./dist/'
+                },
+                files:{
+                    '.build/':['./js/drag.js','./js/limit.js','./js/main.js','./js/util.js']
+                }
+            }
+        },
+        uglify:{
+            sea3:{
+                files:{
+                    './dist/js/main.js':'./dist/js/main.js'
                 }
             }
         }
     })
     //注册插件
     grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-cmd-transport');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
 
-    grunt.registerTask('default',['concat']);
+    //grunt.registerTask('default',['concat']);
+    grunt.registerTask('default',['transport','concat','uglify']);
 }

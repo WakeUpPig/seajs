@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="sea.js"></script>
+<style>
+    #div1{
+        width: 100px;
+        height: 100px;
+        background: blue;
+        position: absolute;
+        top:0;
+        left:0;
+    }
+    #div1.yellow{
+        background: yellow;
+    }
+</style>
+<body>
+<div id="div1"></div>
+<script>
+//    •一个可拖动的蓝色div盒子
+//    •当鼠标按下的时候盒子变黄，离开时变回蓝色
+//    •限制盒子拖动的范围
+    //使用我们的主模块
+    seajs.use('./js/main');
+</script>
+</body>
+</html>
